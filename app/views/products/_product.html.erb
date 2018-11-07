@@ -2,6 +2,13 @@
   <header>
     <%= link_to product do %>
       <%= image_tag product.image.thumb, alt: product.name %>
+        
+        <%if product.quantity == 0 %>
+        <div class="soldout">
+        <span>SOLD OUT</span>
+        </div>
+        <% end %>
+
       <h4><%= product.name %></h4>
     <% end %>
   </header>
@@ -21,3 +28,5 @@
     <%= humanized_money_with_symbol product.price %>
   </aside>
 </article>
+
+

@@ -6,6 +6,7 @@ main section.categories-show {
     flex-direction:  row;
     flex-wrap:       wrap;
     justify-content: space-around;
+    
 
     .product {
       // flex:      1;
@@ -20,12 +21,28 @@ main section.categories-show {
       margin-top:    20px;
       // margin:        10px;
 
+      header {
+        margin-top: 2em;
+      }
+
       header img {
         max-width: 100%;
         max-height: 140px;
         margin: auto;
         display: block;
       }
+      
+    .soldout {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      background-color: red;
+      border-bottom-right-radius: 20px;
+      font-size: 0.8em;
+      color: white;
+
+    }
 
       footer {
         position: absolute;
