@@ -4,6 +4,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @line_item = @order.line_items
     @products = Product.all
+
   end
 
   def create
@@ -12,6 +13,8 @@ class OrdersController < ApplicationController
 
     if order.valid?
       empty_cart!
+      @order = order
+      Notifier.order_email(order).deliver_now 
       redirect_to order, notice: 'Your Order has been placed.'
     else
       redirect_to cart_path, flash: { error: order.errors.full_messages.first }
