@@ -16,5 +16,12 @@ def review_params
   params.require(:review).permit(:description, :product_id, :rating)
 end
 
+def destroy
+    @review = Review.find params[:id]
+    @review.destroy
+    redirect_to :back, notice: 'Review deleted!'
+
+end 
+
  end  
 

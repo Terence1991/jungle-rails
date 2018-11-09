@@ -46,6 +46,7 @@
     <dd><%= review.user_id%></dd>
         <dt>rating:</dt>
     <dd><%= review.rating%></dd>
+     <%= link_to fa_icon('trash'), [@product, review ], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
     <%end%>
     </dl>
     </div>
