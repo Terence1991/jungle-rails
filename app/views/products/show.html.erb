@@ -26,6 +26,14 @@
       </div>
     </div>
 
+
+ 
+<%= form_for [@product, @review] do |f| %>
+  <%= f.text_field :description %>
+    <%= f.select :rating, options_for_select([1, 2, 3, 4, 5]) %>
+     <%= f.submit "Submit" %>
+<% end %>
+
     <div>
     <dl>
     <%@reviews.each do |review|%>
@@ -35,6 +43,8 @@
     <dd><%= review.description%></dd>
     <dt>user</dt>
     <dd><%= review.user_id%></dd>
+        <dt>rating:</dt>
+    <dd><%= review.rating%></dd>
     <%end%>
     </dl>
     </div>
