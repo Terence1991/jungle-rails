@@ -26,6 +26,19 @@
       </div>
     </div>
 
+    <div>
+    <dl>
+    <%@reviews.each do |review|%>
+    <dt>name</dt>
+    <dd><%= review.name%></dd>
+    <dt>description</dt>
+    <dd><%= review.description%></dd>
+    <dt>user</dt>
+    <dd><%= review.user_id%></dd>
+    <%end%>
+    </dl>
+    </div>
+
   </article>
 
 </section>
