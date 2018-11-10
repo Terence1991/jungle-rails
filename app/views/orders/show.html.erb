@@ -12,7 +12,7 @@
    </div>
 
    <div>Price</div>
-<%= cart_subtotal_cents / 100.0  %>
+<%= @order.total_cents / 100.0  %>
 
   <h2 class = email>Email: <%= @order.email%></h2>
 
