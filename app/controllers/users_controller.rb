@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-  def new 
+  validates :password, length: {in: 6..20}
+  validates :password_confirmation, length: {in: 6..16}
+end 
+
+def new 
   end 
 
   def create
