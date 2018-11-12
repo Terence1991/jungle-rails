@@ -15,6 +15,9 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 
+
+
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
@@ -52,6 +55,7 @@ group :development, :test do
   gem 'byebug'
   gem 'quiet_assets'
   gem 'dotenv-rails'
+  gem 'rspec-rails', '~> 3.8'
 end
 
 group :development do
