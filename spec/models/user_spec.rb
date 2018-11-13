@@ -35,11 +35,11 @@ RSpec.describe User, type: :model do
     expect(@user).to eql(@user3)
   end
   it "should verify with  diffrent letter" do
-  @user4 = User.new({name: "hommer", email: "damon@gmail.com",  password: "ding45445", password_confirmation: 'ding45445'})
-  @user4.save()
-  @user = User.authenticate_with_credentials('dAMon@gmail.com', @user4.password)
-  expect(@user).to eql(@user4)
-  expect(@user).to eql(@user4)
+    @user4 = User.new({name: "hommer", email: "damon@gmail.com",  password: "ding45445", password_confirmation: 'ding45445'})
+    @user4.save()
+    @user = User.authenticate_with_credentials('dAMon@gmail.com', @user4.password)
+    expect(@user).to eql(@user4)
+    expect(@user).to eql(@user4)
    end 
   end 
  end 
